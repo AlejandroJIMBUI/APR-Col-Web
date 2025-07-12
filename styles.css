@@ -68,10 +68,6 @@ nav.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-nav.scrolled ul li a {
-  color: var(--secondary-accent);
-}
-
 nav.scrolled ul li a:hover {
   color: var(--primary-accent);
 }
@@ -229,7 +225,7 @@ main.scroll-effect-3::before {
   border-radius: 8px;
   padding: 25px;
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
