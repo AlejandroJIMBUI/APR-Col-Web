@@ -2,6 +2,7 @@
 :root {
   --primary-bg: #222222;
   --primary-accent: #708090;
+  --third-accent: #8db7e1;
   --secondary-accent: #36454f;
   --text-light: #ffffff;
   --text-dark: #333333;
@@ -38,7 +39,7 @@ body {
 /* Header estilizado */
 .header {
   padding: 100px 0;
-  color: var(--primary-accent);
+  color: var(--third-accent);
   text-align: center;
   border-bottom: 2px solid var(--secondary-accent);
   margin-bottom: 20px;
@@ -47,6 +48,31 @@ body {
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(156, 199, 239, 0.7),
+               0 0 20px rgba(113, 141, 170, 0.5),
+               0 0 30px rgba(112, 128, 144, 0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.header p {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Animación de brillo */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(112, 128, 144, 0.5),
+                 0 0 10px rgba(112, 128, 144, 0.4),
+                 0 0 15px rgba(112, 128, 144, 0.3);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(112, 128, 144, 0.8),
+                 0 0 20px rgba(112, 128, 144, 0.6),
+                 0 0 30px rgba(112, 128, 144, 0.4),
+                 0 0 40px rgba(112, 128, 144, 0.2);
+  }
 }
 
 .header p {
