@@ -2,7 +2,7 @@
 :root {
   --primary-bg: #222222;
   --primary-accent: #708090;
-  --third-accent: #8db7e1;
+  --third-accent: #798eaf;
   --secondary-accent: #36454f;
   --text-light: #ffffff;
   --text-dark: #333333;
@@ -39,7 +39,7 @@ body {
 /* Header estilizado */
 .header {
   padding: 100px 0;
-  color: var(--third-accent);
+  color: var(--third-accent); 
   text-align: center;
   border-bottom: 2px solid var(--secondary-accent);
   margin-bottom: 20px;
@@ -48,31 +48,12 @@ body {
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 5px;
-  text-shadow: 0 0 10px rgba(156, 199, 239, 0.7),
-               0 0 20px rgba(113, 141, 170, 0.5),
-               0 0 30px rgba(112, 128, 144, 0.3);
-  animation: glow 2s ease-in-out infinite alternate;
 }
 
 .header p {
   font-size: 1rem;
   color: var(--text-light);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* Animación de brillo */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px rgba(112, 128, 144, 0.5),
-                 0 0 10px rgba(112, 128, 144, 0.4),
-                 0 0 15px rgba(112, 128, 144, 0.3);
-  }
-  to {
-    text-shadow: 0 0 10px rgba(112, 128, 144, 0.8),
-                 0 0 20px rgba(112, 128, 144, 0.6),
-                 0 0 30px rgba(112, 128, 144, 0.4),
-                 0 0 40px rgba(112, 128, 144, 0.2);
-  }
+  
 }
 
 .header p {
@@ -166,7 +147,7 @@ main::before {
   backdrop-filter: blur(8px);
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.5s ease, background 0.5s ease;
+  transition: opacity 0.7s ease, background 0.7s ease;
   will-change: opacity, background;
 }
 
@@ -182,7 +163,7 @@ main.scroll-effect-1::before {
 
 main.scroll-effect-2::before {
   background: linear-gradient(135deg, 
-    rgba(186, 255, 0, 0.1) 0%, 
+    rgba(138, 168, 201, 0.3) 0%, 
     rgba(112, 128, 144, 0.3) 25%, 
     rgba(54, 69, 79, 0.5) 50%, 
     rgba(45, 45, 45, 0.7) 75%, 
@@ -193,9 +174,9 @@ main.scroll-effect-3::before {
   background: linear-gradient(225deg, 
     rgba(34, 34, 34, 0.2) 0%, 
     rgba(45, 45, 45, 0.4) 25%, 
-    rgba(54, 69, 79, 0.6) 50%, 
+    rgba(77, 98, 111, 0.6) 50%, 
     rgba(112, 128, 144, 0.8) 75%, 
-    rgba(186, 255, 0, 0.1) 100%);
+    rgba(112, 130, 145, 0.8) 100%);
 }
 
 /* Secciones */
@@ -377,4 +358,20 @@ footer {
   .hero, .features {
     padding: 20px 10px;
   }
+}
+
+.header-logo {
+  height: 150px;
+  width: auto;
+  margin: 0 auto 30px;
+  display: block;
+  transition: 
+    transform 0.5s ease-out,
+    filter 0.3s ease;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+.header-logo {
+  animation: fadeIn 1s ease-out;
 }
