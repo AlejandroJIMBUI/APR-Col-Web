@@ -31,7 +31,7 @@ body {
 /* Layout mejorado */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -65,11 +65,12 @@ body {
 
 /*Barra de navegacion*/
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  transition: all 0.4s ease;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    transition: all 0.4s ease;
 }
 
 /* Estado de la barra al hacer scroll */
@@ -128,6 +129,8 @@ nav ul li a:hover::after {
 /* Contenido principal */
 main {
   flex: 1;
+  margin-top: 50px;
+  padding-top: 30px;
   padding: 20px 0 40px;
   position: relative;
   overflow: hidden;
@@ -157,29 +160,32 @@ main::before {
 /* Efecto de cambio con scroll */
 main.scroll-effect-1::before {
   opacity: 1;
-  background: linear-gradient(45deg, 
-    rgba(112, 128, 144, 0.4) 0%, 
-    rgba(54, 69, 79, 0.5) 33%, 
-    rgba(45, 45, 45, 0.6) 66%, 
-    rgba(34, 34, 34, 0.8) 100%);
+  background: linear-gradient(60deg,
+    rgba(112, 128, 144, 0.2) 0%,
+    rgba(89, 104, 120, 0.35) 20%,
+    rgba(54, 69, 79, 0.5) 45%,
+    rgba(45, 45, 45, 0.6) 75%,
+    rgba(34, 34, 34, 0.85) 100%);
 }
 
 main.scroll-effect-2::before {
-  background: linear-gradient(135deg, 
-    rgba(138, 168, 201, 0.3) 0%, 
-    rgba(112, 128, 144, 0.3) 25%, 
-    rgba(54, 69, 79, 0.5) 50%, 
-    rgba(45, 45, 45, 0.7) 75%, 
+  background: linear-gradient(120deg,
+    rgba(138, 168, 201, 0.25) 0%,
+    rgba(120, 138, 155, 0.3) 15%,
+    rgba(112, 128, 144, 0.35) 30%,
+    rgba(77, 90, 105, 0.5) 50%,
+    rgba(54, 69, 79, 0.6) 70%,
     rgba(34, 34, 34, 0.9) 100%);
 }
 
 main.scroll-effect-3::before {
-  background: linear-gradient(225deg, 
-    rgba(34, 34, 34, 0.2) 0%, 
-    rgba(45, 45, 45, 0.4) 25%, 
-    rgba(77, 98, 111, 0.6) 50%, 
-    rgba(112, 128, 144, 0.8) 75%, 
-    rgba(112, 130, 145, 0.8) 100%);
+  background: linear-gradient(200deg,
+    rgba(34, 34, 34, 0.15) 0%,
+    rgba(45, 45, 45, 0.25) 20%,
+    rgba(77, 98, 111, 0.45) 45%,
+    rgba(112, 128, 144, 0.65) 70%,
+    rgba(138, 168, 201, 0.7) 85%,
+    rgba(160, 180, 210, 0.75) 100%);
 }
 
 /* Secciones */
@@ -187,16 +193,134 @@ main.scroll-effect-3::before {
   position: relative;
   z-index: 2;
   padding: 30px;
+}   
+
+
+.article-title {
+    color: var(--primary-accent);
 }
 
-.features h2 {
-  color: var(--primary-accent);
-  text-align: left;
-  margin-left: 70px;
+
+/* article 1*/
+.article_1 {
+  background-color: rgba(45, 45, 45, 0.8); /* Fondo semitransparente */
+  border-left: 4px solid var(--third-accent); /* Borde lateral de acento */
+  padding: 30px;
+  max-width: 65%; /* Ocupa el 65% del ancho */
+  margin-right: auto;
+  margin-left: 5%;
+  transform: perspective(500px) rotateY(-5deg); /* Efecto 3D sutil */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 9px;
+
+   /* Nuevo borde con degradado */
+  border: 1px solid transparent; /* Necesario para el efecto */
+  border-image: linear-gradient(
+    to right,
+    transparent,
+    var(--third-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
 }
+
+.article_1 p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+} 
+
+.article_1:hover {
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* article 2*/
+.article_2 {
+  background-color: rgba(45, 45, 45, 0.8);
+  border-right: 4px solid var(--third-accent); /* Borde derecho en lugar de izquierdo */
+  border-left: none;
+  padding: 30px;
+  max-width: 65%;
+  margin-left: auto;  /* Esto empuja a la derecha */
+  margin-right: 5%;   /* Reemplaza el margin-left anterior */
+  margin-top: 40px;   /* Espacio superior respecto al article_1 */
+  transform: perspective(500px) rotateY(5deg); /* Rotación inversa */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 9px;
+
+  border: 1px solid transparent; /* Necesario para el efecto */
+  border-image: linear-gradient(
+    to right,
+    transparent,
+    var(--third-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+}
+
+.article_2 h2 {
+  text-align: left;
+}
+
+.article_2 p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.article_2:hover {
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra invertida */
+}
+
+
+/* article 1*/
+.article_3 {
+  background-color: rgba(45, 45, 45, 0.8); /* Fondo semitransparente */
+  border-left: 4px solid var(--third-accent); /* Borde lateral de acento */
+  padding: 30px;
+  max-width: 65%; /* Ocupa el 65% del ancho */
+  margin-right: auto;
+  margin-top: 40px; 
+  margin-bottom: 40px; 
+  margin-left: 5%;
+  transform: perspective(500px) rotateY(-5deg); /* Efecto 3D sutil */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 9px;
+
+   /* Nuevo borde con degradado */
+  border: 1px solid transparent; /* Necesario para el efecto */
+  border-image: linear-gradient(
+    to right,
+    transparent,
+    var(--third-accent),
+    transparent
+  );
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+}
+
+.article_3 p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+} 
+
+.article_3:hover {
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+    
 /* Footer */
 footer {
-  background-color: var(--card-bg);
+  background-color: var(--card-bg); 
   color: var(--text-light);
   text-align: center;
   margin-top: auto;
