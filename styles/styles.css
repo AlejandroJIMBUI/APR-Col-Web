@@ -304,3 +304,258 @@ footer {
 .header-logo {
   animation: fadeIn 1s ease-out;
 }
+
+.features_1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Cambiado de space-between a flex-start */
+  gap: 50px;
+  padding: 40px;
+  margin: 50px 5% 50px 0; /* Margen derecho eliminado para alinear a la izquierda */
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  border-left: 3px solid var(--third-accent);
+  position: relative;
+  overflow: hidden;
+  width: fit-content; /* Ajusta el ancho al contenido */
+  max-width: 90%; /* Evita que sea demasiado ancho */
+  margin-left: 340px;
+}
+
+.features_1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(141, 184, 225, 0.1),
+    transparent
+  );
+  z-index: 0;
+}
+
+.features_1 p {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  font-family: 'Montserrat', sans-serif;
+  flex: 0 1 auto; /* Cambiado para no expandirse */
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  min-width: 300px; /* Ancho mínimo para el texto */
+}
+
+.screenshot_1 {
+  width: 45%;
+  max-width: 450px;
+  min-width: 250px; /* Ancho mínimo para la imagen */
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(141, 184, 225, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.screenshot_1:hover {
+  transform: perspective(1000px) rotateY(-5deg) translateY(-8px);
+  border-radius: 18px;
+}
+
+
+.features_2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Contenido alineado a la derecha */
+  gap: 50px;
+  padding: 40px;
+  margin: 100px 0 50px 580px; /* Margen izquierdo de 200px como solicitaste */
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  border-right: 3px solid var(--third-accent); /* Borde acento a la derecha */
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  max-width: calc(100% - 200px); /* Ajuste para considerar el margen */
+  margin-right: auto; /* Esto permite el margen izquierdo */
+}
+
+.features_2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; /* Gradiente ahora a la izquierda */
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right, /* Dirección del gradiente invertida */
+    rgba(141, 184, 225, 0.1),
+    transparent
+  );
+  z-index: 0;
+}
+
+.features_2 p {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  font-family: 'Montserrat', sans-serif;
+  flex: 0 1 auto;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  min-width: 300px;
+  text-align: right; /* Texto alineado a la derecha */
+}
+
+.screenshot_2 {
+  width: 45%;
+  max-width: 450px;
+  min-width: 250px;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(141, 184, 225, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  z-index: 1;
+  order: -1; /* Imagen a la izquierda del texto */
+}
+
+.screenshot_2:hover {
+  transform: perspective(1000px) rotateY(5deg) translateY(-8px);
+  border-radius: 18px;
+}
+
+.features_3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Cambiado de space-between a flex-start */
+  gap: 50px;
+  padding: 40px;
+  margin: 100px 5% 50px 0; /* Margen derecho eliminado para alinear a la izquierda */
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  border-left: 3px solid var(--third-accent);
+  position: relative;
+  overflow: hidden;
+  width: fit-content; /* Ajusta el ancho al contenido */
+  max-width: 90%; /* Evita que sea demasiado ancho */
+  margin-left: 340px;
+}
+
+.features_3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(141, 184, 225, 0.1),
+    transparent
+  );
+  z-index: 0;
+}
+
+.features_3 p {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  font-family: 'Montserrat', sans-serif;
+  flex: 0 1 auto; /* Cambiado para no expandirse */
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  min-width: 300px; /* Ancho mínimo para el texto */
+}
+
+.screenshot_3 {
+  width: 45%;
+  max-width: 450px;
+  min-width: 250px; /* Ancho mínimo para la imagen */
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(141, 184, 225, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.screenshot_3:hover {
+  transform: perspective(1000px) rotateY(-5deg) translateY(-8px);
+  border-radius: 18px;
+}
+
+/* Estilos para el enlace GET de GitHub */
+.github-link-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 50px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(45, 45, 45, 0.7);
+    border-radius: 8px;
+    padding: 12px 20px;
+    border: 1px solid var(--third-accent);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.github-link:hover {
+    background: rgba(45, 45, 45, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-accent);
+}
+
+.method-get {
+    color: var(--third-accent);
+    padding: 5px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover .github-url {
+    color: var(--primary-accent);
+}
+
+.footer-trigger {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+}
+
+.footer {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nuevos efectos para cuando se llega al footer */
+main.footer-effect::before {
+  background: linear-gradient(225deg, 
+    rgba(34, 34, 34, 0.8) 0%, 
+    rgba(45, 45, 45, 0.6) 33%, 
+    rgba(54, 69, 79, 0.5) 66%, 
+    rgba(112, 128, 144, 0.4) 100%) !important;
+  opacity: 1 !important;
+}
