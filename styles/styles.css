@@ -125,7 +125,7 @@ nav ul li a:hover::after {
 /* Contenido principal */
 main {
   flex: 1;
-  padding: 20px 0 40px;
+  padding: 20px 15px 40px;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -308,18 +308,17 @@ footer {
 .features_1 {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Cambiado de space-between a flex-start */
+  justify-content: flex-start; /* Contenido interno alineado a la izquierda */
   gap: 50px;
   padding: 40px;
-  margin: 50px 5% 50px 0; /* Margen derecho eliminado para alinear a la izquierda */
+  margin: 50px auto; /* Centrado horizontal con márgenes automáticos */
   background: rgba(45, 45, 45, 0.6);
   border-radius: 12px;
-  border-left: 3px solid var(--third-accent);
+  border-left: 3px solid var(--third-accent); /* Borde acento a la izquierda */
   position: relative;
   overflow: hidden;
   width: fit-content; /* Ajusta el ancho al contenido */
-  max-width: 90%; /* Evita que sea demasiado ancho */
-  margin-left: 340px;
+  max-width: 90%; /* Limita el ancho máximo */
 }
 
 .features_1::before {
@@ -370,18 +369,17 @@ footer {
 .features_2 {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Contenido alineado a la derecha */
+  justify-content: flex-end; /* Contenido interno alineado a la derecha */
   gap: 50px;
   padding: 40px;
-  margin: 100px 0 50px 580px; /* Margen izquierdo de 200px como solicitaste */
+  margin: 100px auto 100px; /* Cambiado a 'auto' para centrar horizontalmente */
   background: rgba(45, 45, 45, 0.6);
   border-radius: 12px;
-  border-right: 3px solid var(--third-accent); /* Borde acento a la derecha */
+  border-right: 3px solid var(--third-accent);
   position: relative;
   overflow: hidden;
   width: fit-content;
   max-width: calc(100% - 200px); /* Ajuste para considerar el margen */
-  margin-right: auto; /* Esto permite el margen izquierdo */
 }
 
 .features_2::before {
@@ -430,62 +428,6 @@ footer {
   border-radius: 18px;
 }
 
-.features_3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Cambiado de space-between a flex-start */
-  gap: 50px;
-  padding: 40px;
-  margin: 100px 5% 50px 0; /* Margen derecho eliminado para alinear a la izquierda */
-  background: rgba(45, 45, 45, 0.6);
-  border-radius: 12px;
-  border-left: 3px solid var(--third-accent);
-  position: relative;
-  overflow: hidden;
-  width: fit-content; /* Ajusta el ancho al contenido */
-  max-width: 90%; /* Evita que sea demasiado ancho */
-  margin-left: 340px;
-}
-
-.features_3::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(
-    to left,
-    rgba(141, 184, 225, 0.1),
-    transparent
-  );
-  z-index: 0;
-}
-
-.features_3 p {
-  font-size: 1.6rem;
-  color: var(--text-light);
-  font-family: 'Montserrat', sans-serif;
-  flex: 0 1 auto; /* Cambiado para no expandirse */
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  min-width: 300px; /* Ancho mínimo para el texto */
-}
-
-.screenshot_3 {
-  width: 45%;
-  max-width: 450px;
-  min-width: 250px; /* Ancho mínimo para la imagen */
-  border-radius: 15px;
-  box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(141, 184, 225, 0.2);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  z-index: 1;
-}
-
 .screenshot_3:hover {
   transform: perspective(1000px) rotateY(-5deg) translateY(-8px);
   border-radius: 18px;
@@ -505,7 +447,7 @@ footer {
     background: rgba(45, 45, 45, 0.7);
     border-radius: 8px;
     padding: 12px 20px;
-    border: 1px solid var(--third-accent);
+    border: 1px solid var(--primary-accent);
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
