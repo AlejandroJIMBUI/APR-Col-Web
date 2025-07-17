@@ -61,6 +61,12 @@ body {
   color: var(--text-light);
 }
 
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -131,61 +137,6 @@ main {
   z-index: 1;
 }
 
-main::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, 
-    rgba(112, 128, 144, 0.2) 0%, 
-    rgba(54, 69, 79, 0.3) 20%, 
-    rgba(45, 45, 45, 0.4) 40%, 
-    rgba(34, 34, 34, 0.6) 60%, 
-    rgba(0, 0, 0, 0.8) 80%);
-  backdrop-filter: blur(8px);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.7s ease, background 0.7s ease;
-  will-change: opacity, background;
-}
-
-/* Efecto de cambio con scroll */
-main.scroll-effect-1::before {
-  opacity: 1;
-  background: linear-gradient(45deg, 
-    rgba(112, 128, 144, 0.4) 0%, 
-    rgba(54, 69, 79, 0.5) 33%, 
-    rgba(45, 45, 45, 0.6) 66%, 
-    rgba(34, 34, 34, 0.8) 100%);
-}
-
-main.scroll-effect-2::before {
-  background: linear-gradient(135deg, 
-    rgba(138, 168, 201, 0.3) 0%, 
-    rgba(112, 128, 144, 0.3) 25%, 
-    rgba(54, 69, 79, 0.5) 50%, 
-    rgba(45, 45, 45, 0.7) 75%, 
-    rgba(34, 34, 34, 0.9) 100%);
-}
-
-main.scroll-effect-3::before {
-  background: linear-gradient(225deg, 
-    rgba(34, 34, 34, 0.2) 0%, 
-    rgba(45, 45, 45, 0.4) 25%, 
-    rgba(77, 98, 111, 0.6) 50%, 
-    rgba(112, 128, 144, 0.8) 75%, 
-    rgba(112, 130, 145, 0.8) 100%);
-}
-
-/* Secciones */
-.header, .hero, .features, footer {
-  position: relative;
-  z-index: 2;
-  padding: 30px;
-}
-
 /* Hero section */
 .hero {
   text-align: center;
@@ -214,79 +165,12 @@ main.scroll-effect-3::before {
   margin-left: 70px;
 }
 
-/* Footer */
 footer {
   background-color: var(--card-bg);
   color: var(--text-light);
   text-align: center;
+  padding: 20px;
   margin-top: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    padding: 60px 0;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
-  }
-  
-  .header p {
-    font-size: 0.9rem;
-  }
-  
-  nav ul {
-    padding: 10px;
-  }
-  
-  nav ul li {
-    margin: 5px;
-  }
-  
-  nav ul li a {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-  }
-  
-  .header-logo {
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 40px 0;
-  }
-  
-  .header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .header-logo {
-    height: 100px;
-    margin-bottom: 20px;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-  }
-  
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 2px 0;
-  }
-  
-  nav ul li a {
-    padding: 10px;
-  }
-  
-  .hero, .features {
-    padding: 20px 10px;
-  }
 }
 
 .header-logo {
@@ -340,17 +224,17 @@ footer {
   font-size: 1.6rem;
   color: var(--text-light);
   font-family: 'Montserrat', sans-serif;
-  flex: 0 1 auto; /* Cambiado para no expandirse */
+  flex: 0 1 auto; 
   position: relative;
   z-index: 1;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  min-width: 300px; /* Ancho mínimo para el texto */
+  min-width: 300px; 
 }
 
 .screenshot_1 {
   width: 45%;
   max-width: 450px;
-  min-width: 250px; /* Ancho mínimo para la imagen */
+  min-width: 250px; 
   border-radius: 15px;
   box-shadow: 
     0 10px 25px rgba(0, 0, 0, 0.4),
@@ -369,28 +253,28 @@ footer {
 .features_2 {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Contenido interno alineado a la derecha */
+  justify-content: flex-end; 
   gap: 50px;
   padding: 40px;
-  margin: 100px auto 100px; /* Cambiado a 'auto' para centrar horizontalmente */
+  margin: 100px auto 100px;
   background: rgba(45, 45, 45, 0.6);
   border-radius: 12px;
   border-right: 3px solid var(--third-accent);
   position: relative;
   overflow: hidden;
   width: fit-content;
-  max-width: calc(100% - 200px); /* Ajuste para considerar el margen */
+  max-width: calc(100% - 200px); 
 }
 
 .features_2::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0; /* Gradiente ahora a la izquierda */
+  left: 0;
   width: 40%;
   height: 100%;
   background: linear-gradient(
-    to right, /* Dirección del gradiente invertida */
+    to right,
     rgba(141, 184, 225, 0.1),
     transparent
   );
@@ -406,7 +290,7 @@ footer {
   z-index: 1;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   min-width: 300px;
-  text-align: right; /* Texto alineado a la derecha */
+  text-align: right;
 }
 
 .screenshot_2 {
@@ -420,7 +304,7 @@ footer {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   z-index: 1;
-  order: -1; /* Imagen a la izquierda del texto */
+  order: -1;
 }
 
 .screenshot_2:hover {
@@ -428,76 +312,131 @@ footer {
   border-radius: 18px;
 }
 
-.screenshot_3:hover {
-  transform: perspective(1000px) rotateY(-5deg) translateY(-8px);
-  border-radius: 18px;
+
+/*GitHub widget styles*/
+.github-widget {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
 }
 
-/* Estilos para el enlace GET de GitHub */
-.github-link-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0 50px;
-}
-
-.github-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    background: rgba(45, 45, 45, 0.7);
-    border-radius: 8px;
-    padding: 12px 20px;
-    border: 1px solid var(--primary-accent);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.github-link:hover {
-    background: rgba(45, 45, 45, 0.9);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    border-color: var(--primary-accent);
-}
-
-.method-get {
-    color: var(--third-accent);
-    padding: 5px 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.github-link:hover .github-url {
-    color: var(--primary-accent);
-}
-
-.footer-trigger {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.github-card {
+  background: #1b1c1d;
+  border: 1px solid #313a44;
+  border-radius: 12px;
+  padding: 20px;
   width: 100%;
-  height: 1px;
-  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);  
+  transition: transform 0.3s ease;
 }
 
-.footer {
-  background-color: var(--card-bg);
-  color: var(--text-light);
-  text-align: center;
-  padding: 40px 0;
-  position: relative;
-  z-index: 2;
+.github-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
-/* Nuevos efectos para cuando se llega al footer */
-main.footer-effect::before {
-  background: linear-gradient(225deg, 
-    rgba(34, 34, 34, 0.8) 0%, 
-    rgba(45, 45, 45, 0.6) 33%, 
-    rgba(54, 69, 79, 0.5) 66%, 
-    rgba(112, 128, 144, 0.4) 100%) !important;
-  opacity: 1 !important;
+.repo-card {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #30363d;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #238636;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.github-button:hover {
+  background: #2ea043;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+}
+
+.github-icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 60px 0;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 0.9rem;
+  }
+  
+  nav ul {
+    padding: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px;
+  }
+  
+  nav ul li a {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .header-logo {
+    height: 120px;
+  }
+
+  .github-card {
+      padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 40px 0;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header-logo {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
+  }
+  
+  nav ul li a {
+    padding: 10px;
+  }
+  
+  .hero, .features {
+    padding: 20px 10px;
+  }
 }
